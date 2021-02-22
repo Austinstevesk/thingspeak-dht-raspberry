@@ -30,7 +30,7 @@ def main():
                                "&field1=%s&field2=%s" % (RH, T)) 
            print(f.read()) 
            f.close() 
-           sleep(300) #uploads DHT22 sensor values every 5 minutes 
+           sleep(300) #uploads DHT11 sensor values every 5 minutes 
        except: 
            print('exiting.') 
            break 
