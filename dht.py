@@ -1,6 +1,6 @@
 
 """ 
-dht22.py 
+dht11.py 
 
 Temperature/Humidity monitor using Raspberry Pi and DHT22. 
 Data is displayed at thingspeak.com
@@ -11,12 +11,12 @@ import sys
 import RPi.GPIO as GPIO 
 from time import sleep 
 import Adafruit_DHT 
-import urllib2 
+import urllib3 
 
 myAPI = "<your API code here>" 
 
 def getSensorData(): 
-   RH, T = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 23) #23 refers to GPIO 23, or pin 16 on the RPi
+   RH, T = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 17) #17 refers to GPIO 17, or pin 6 on the RPi
    return (str(RH), str(T)) 
 
 def main(): 
