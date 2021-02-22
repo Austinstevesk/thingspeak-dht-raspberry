@@ -16,7 +16,7 @@ import urllib2
 myAPI = "<your API code here>" 
 
 def getSensorData(): 
-   RH, T = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 23) #23 refers to GPIO 23, or pin 16 on the RPi
+   RH, T = Adafruit_DHT.read_retry(Adafruit_DHT.DHT11, 23) #23 refers to GPIO 23, or pin 16 on the RPi
    return (str(RH), str(T)) 
 
 def main(): 
