@@ -24,7 +24,7 @@ def main():
    baseURL = 'https://api.thingspeak.com/update?api_key=%s' % myAPI 
 
    while True: 
-       try: 
+       try: #try catch to get data from DHT
            RH, T = getSensorData() 
            f = urllib3.urlopen(baseURL + 
                                "&field1=%s&field2=%s" % (RH, T)) #Send/Update the data
