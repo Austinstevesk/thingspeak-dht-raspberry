@@ -31,7 +31,7 @@ def main():
            print(f.read()) 
            f.close() 
            sleep(300) #uploads DHT11 sensor values every 5 minutes 
-       except: 
+       except: #If no data, it exits
            print('exiting.') 
            break 
 
