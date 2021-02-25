@@ -27,7 +27,7 @@ def main():
        try: 
            RH, T = getSensorData() 
            f = urllib3.urlopen(baseURL + 
-                               "&field1=%s&field2=%s" % (RH, T)) 
+                               "&field1=%s&field2=%s" % (RH, T)) #Send/Update the data
            print(f.read()) 
            f.close() 
            sleep(300) #uploads DHT11 sensor values every 5 minutes 
